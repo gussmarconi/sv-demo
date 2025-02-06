@@ -13,7 +13,9 @@
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
-		"test:e2e": "playwright test"
+		"test:e2e": "playwright test",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
 	},
 	"files": [
 		"dist",
@@ -36,13 +38,24 @@
 		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
+		"@chromatic-com/storybook": "^3.2.4",
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
 		"@playwright/test": "^1.49.1",
+		"@skeletonlabs/skeleton": "^3.0.0-next.10",
+		"@skeletonlabs/skeleton-svelte": "^1.0.0-next.18",
+		"@storybook/addon-essentials": "^8.5.3",
+		"@storybook/addon-interactions": "^8.5.3",
+		"@storybook/addon-svelte-csf": "^5.0.0-next.23",
+		"@storybook/blocks": "^8.5.3",
+		"@storybook/svelte": "^8.5.3",
+		"@storybook/sveltekit": "^8.5.3",
+		"@storybook/test": "^8.5.3",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.10",
 		"@tailwindcss/typography": "^0.5.16",
 		"autoprefixer": "^10.4.20",
@@ -54,6 +67,7 @@
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.10",
 		"publint": "^0.3.2",
+		"storybook": "^8.5.3",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^3.4.17",
